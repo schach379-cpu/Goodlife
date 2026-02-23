@@ -1,0 +1,31 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { Navbar } from '../components/salon/navbar';
+import { Hero } from '../components/salon/hero';
+import { Marquee } from '../components/salon/marquee';
+import { About } from '../components/salon/about';
+import { Services } from '../components/salon/services';
+import { Gallery } from '../components/salon/gallery';
+import { Testimonials } from '../components/salon/testimonials';
+import { Contact } from '../components/salon/contact';
+import { Footer } from '../components/salon/footer';
+
+const pageTitle = 'Hairsalon Goodlife – Blond & Balayage, Castrop-Rauxel';
+const pageDescription =
+  'Hairsalon Goodlife: Meisterbetrieb seit 2014 in Castrop-Rauxel. Blond- & Balayage-Experten, Newsha-Partner. Widumerstr. 14 · 02305 544584 · Mo–Fr 8:30–18:30, Sa 8:30–15:00.';
+---
+
+<BaseLayout title={pageTitle} description={pageDescription}>
+  <Navbar client:load />
+  <main>
+    <Hero />
+    <Marquee />
+    <About />
+    <Services />
+    <Gallery client:load />
+    <Testimonials />
+    <Contact client:load />
+  </main>
+  <Footer />
+</BaseLayout>
+

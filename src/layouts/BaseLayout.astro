@@ -1,0 +1,73 @@
+---
+import '../styles/global.css';
+
+const {
+  title = 'Hairsalon Goodlife – Blond & Balayage, Castrop-Rauxel',
+  description = 'Hairsalon Goodlife: Meisterbetrieb seit 2014 in Castrop-Rauxel. Blond- & Balayage-Experten, Newsha-Partner. Mo–Fr 8:30–18:30, Sa 8:30–15:00. 📞 02305 544584, Widumerstr. 14.',
+} = Astro.props;
+
+const siteUrl = Astro.site?.href ?? 'https://www.hairsalon-goodlife.example';
+const salonName = 'Hairsalon Goodlife';
+const salonAddress = 'Widumerstr. 14, 45768 Castrop-Rauxel';
+const salonPhone = '02305 544584';
+const salonInstagram = 'https://www.instagram.com/hairsalon.goodlife';
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'HairSalon',
+  name: salonName,
+  url: siteUrl,
+  telephone: salonPhone,
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'Widumerstr. 14',
+    addressLocality: 'Castrop-Rauxel',
+    postalCode: '45768',
+    addressCountry: 'DE',
+  },
+  openingHoursSpecification: [
+    { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], opens: '08:30', closes: '18:30' },
+    { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Saturday', opens: '08:30', closes: '15:00' },
+  ],
+  sameAs: [salonInstagram],
+};
+---
+
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#1a1814" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+    />
+
+    <link rel="canonical" href={siteUrl} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={siteUrl} />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+
+    <script type="application/ld+json">
+      {JSON.stringify(jsonLd)}
+    </script>
+
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+  </head>
+  <body class="font-sans antialiased">
+    <slot />
+  </body>
+</html>
+

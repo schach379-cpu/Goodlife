@@ -1,0 +1,74 @@
+---
+const phone = '02305 544584';
+const address = 'Widumerstr. 14, 45768 Castrop-Rauxel';
+---
+
+<section id="kontakt" aria-labelledby="kontakt-heading" class="page-grid pt-0">
+  <div class="section-card">
+    <div class="grid-symmetric gap-10">
+      <div class="space-y-4">
+        <p class="accent-pill">Kontakt</p>
+        <h2 id="kontakt-heading" class="headline text-2xl sm:text-3xl">
+          Let&apos;s make it
+          <span class="block text-slate-300">a Goodlife Hair Day.</span>
+        </h2>
+        <p class="subheadline">
+          Termine am besten per Anruf oder Instagram DM. Sag uns, was du dir vorstellst – wir holen dich dort ab.
+        </p>
+
+        <dl class="mt-4 space-y-3 text-sm text-slate-200">
+          <div>
+            <dt class="text-xs font-semibold uppercase tracking-[0.22em] text-slate-400">
+              Telefon
+            </dt>
+            <dd>
+              <a href={`tel:${phone}`} class="pill-link mt-1 inline-flex">
+                {phone}
+              </a>
+            </dd>
+          </div>
+
+          <div>
+            <dt class="text-xs font-semibold uppercase tracking-[0.22em] text-slate-400">
+              Adresse
+            </dt>
+            <dd class="mt-1 text-slate-200">
+              {address}
+            </dd>
+          </div>
+        </dl>
+      </div>
+
+      <div class="space-y-4 text-sm text-slate-200">
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-[0.22em] text-slate-400">
+            Öffnungszeiten
+          </p>
+          <ul class="mt-2 space-y-1 text-slate-200">
+            <li>Mo–Fr: 8:30 – 18:30 Uhr</li>
+            <li>Sa: 8:30 – 15:00 Uhr</li>
+            <li>So: geschlossen</li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-[0.22em] text-slate-400">
+            Online Vibes
+          </p>
+          <p class="mt-2 text-slate-300">
+            Die aktuellsten Looks, Color Stories und Einblicke aus dem Salon findest du auf Instagram.
+          </p>
+          <a
+            href="https://www.instagram.com/hairsalon.goodlife"
+            target="_blank"
+            rel="noreferrer"
+            class="pill-link mt-3 inline-flex"
+          >
+            Zum Instagram-Feed
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
