@@ -5,14 +5,14 @@ import { Dialog, DialogContent } from '../ui/dialog'
 import { Instagram } from 'lucide-react'
 
 const galleryItems = [
-  { src: '/images/style-balayage.jpg', alt: 'Balayage Coloring', label: 'Balayage' },
-  { src: '/images/style-fade.jpg', alt: 'Modern Fade Haircut', label: 'Fade Cut' },
-  { src: '/images/style-curls.jpg', alt: 'Defined Curls Styling', label: 'Curls' },
-  { src: '/images/style-blowout.jpg', alt: 'Sleek Blowout', label: 'Blowout' },
-  { src: '/images/style-color.jpg', alt: 'Creative Hair Coloring', label: 'Color' },
-  { src: '/images/style-updo.jpg', alt: 'Elegant Updo Hairstyle', label: 'Updo' },
-  { src: '/images/style-bob.jpg', alt: 'Modern Bob Haircut', label: 'Bob' },
-  { src: '/images/stylist-at-work.jpg', alt: 'Stylist bei der Arbeit', label: 'Behind the Scenes' },
+  { src: '/images/transform-1-after.jpg', alt: 'Transformation 1 - Nachher', label: 'Nachher' },
+  { src: '/images/transform-1-before.jpg', alt: 'Transformation 1 - Vorher', label: 'Vorher' },
+  { src: '/images/transform-2-after.jpg', alt: 'Transformation 2 - Nachher', label: 'Nachher' },
+  { src: '/images/transform-2-before.jpg', alt: 'Transformation 2 - Vorher', label: 'Vorher' },
+  { src: '/images/transform-3-after.jpg', alt: 'Transformation 3 - Nachher', label: 'Nachher' },
+  { src: '/images/transform-3-before.jpg', alt: 'Transformation 3 - Vorher', label: 'Vorher' },
+  { src: '/images/transform-4-after.jpg', alt: 'Transformation 4 - Nachher', label: 'Nachher' },
+  { src: '/images/transform-4-before.jpg', alt: 'Transformation 4 - Vorher', label: 'Vorher' },
 ]
 
 export function Gallery() {
@@ -27,7 +27,7 @@ export function Gallery() {
             Unsere Arbeiten
           </span>
           <h2 className="mt-4 font-sans text-4xl font-light leading-[1.15] text-foreground text-balance md:text-5xl">
-            Inspiration aus <span className="italic">unserem Studio</span>
+            unsere Arbeiten
           </h2>
           <p className="mt-4 font-[var(--font-body)] text-base leading-relaxed text-muted-foreground">
             Entdecke unsere neuesten Kreationen und lass dich inspirieren

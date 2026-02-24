@@ -36,7 +36,7 @@ export function About() {
             {/* Stats */}
             <div className="mt-8 grid grid-cols-3 gap-8 border-t border-border pt-8">
               <div className="flex flex-col items-center text-center">
-                <span className="font-sans text-3xl font-light text-foreground md:text-4xl">5+</span>
+                <span className="font-sans text-3xl font-light text-foreground md:text-4xl">10+</span>
                 <span className="mt-1 font-[var(--font-body)] text-xs tracking-widest uppercase text-muted-foreground">
                   Jahre Erfahrung
                 </span>

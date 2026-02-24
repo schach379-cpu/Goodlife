@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "vplex-memory": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "vplex-memory@latest"
+      ]
+    }
+  }
+}
